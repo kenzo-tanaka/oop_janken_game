@@ -7,37 +7,42 @@ class Janken
   private
 
   def judge(left, right)
-    if left == 0
-      if right == 0
-        return 0
-      elsif right == 1
-        return 1
+    case left
+    when 0
+      case right
+      when 0
+        0
+      when 1
+        1
       else
-        return -1
+        -1
       end
-    elsif left == 1
-      if right == 0
-        return -1
-      elsif right ==1
-        return 0
+    when 1
+      case right
+      when 0
+        -1
+      when 1
+        0
       else
-        return 1
+        1
       end
     else
-      if right == 2
-        return 1
-      elsif right == 1
-        return -1
+      case right
+      when 2
+        1
+      when 1
+        -1
       else
-        return 0
+        0
       end
     end
   end
 
   def show_result(result)
-    if result == 1
+    case result
+    when 1
       '勝利'
-    elsif result == 0
+    when 0
       '引き分け'
     else
       '敗北'
