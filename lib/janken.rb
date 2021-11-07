@@ -39,6 +39,10 @@ class Janken
   end
 
   def show_result(result, lang)
+    if lang == 'en'
+      return 'Win'
+    end
+
     if lang == 'ja'
       case result
       when 1
