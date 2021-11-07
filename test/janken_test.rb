@@ -1,11 +1,11 @@
 require 'minitest/autorun'
+require_relative '../lib/janken'
 
 class JankenTest < Minitest::Test
-  def test_fail
-    raise('失敗するはず!')
-  end
-
-  def test_success
-    assert_equal(true, true)
+  # 0: グー, 1: チョキ, 2: パー
+  def test_play
+    janken = Janken.new
+    actual = janken.play(0, 1)
+    assert_equal('勝利', actual)
   end
 end
