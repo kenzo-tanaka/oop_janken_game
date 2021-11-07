@@ -43,13 +43,4 @@ class Janken
   def show_result(result)
     display.show(result)
   end
-
-  def get_display(lang)
-    case lang
-    when 'ja'
-      JapaneseDisplay.new
-    else
-      EnglishDisplay.new
-    end
-  end
 end
