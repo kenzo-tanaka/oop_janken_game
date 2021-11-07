@@ -13,11 +13,11 @@ class Janken
   private
 
   def judge(left, right)
+    return 0 if left == right
+
     case left
     when 0
       case right
-      when 0
-        0
       when 1
         1
       else
@@ -27,8 +27,6 @@ class Janken
       case right
       when 0
         -1
-      when 1
-        0
       else
         1
       end
@@ -38,8 +36,6 @@ class Janken
         1
       when 1
         -1
-      else
-        0
       end
     end
   end
