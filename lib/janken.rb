@@ -39,11 +39,17 @@ class Janken
   end
 
   def show_result(result, lang)
-    if lang == 'en'
-      return 'Win'
-    end
-
-    if lang == 'ja'
+    case lang
+    when 'en'
+      case result
+      when 1
+        'Win'
+      when 0
+        'Draw'
+      else
+        'Lose'
+      end
+    when 'ja'
       case result
       when 1
         '勝利'

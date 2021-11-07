@@ -26,5 +26,15 @@ class JankenTest < Minitest::Test
       janken = Janken.new
       assert_equal('Win', janken.play(0, 1, 'en'))
     end
+
+    def test_draw
+      janken = Janken.new
+      assert_equal('Draw', janken.play(1, 1, 'en'))
+    end
+
+    def test_lose
+      janken = Janken.new
+      assert_equal('Lose', janken.play(0, 2, 'en'))
+    end
   end
 end
