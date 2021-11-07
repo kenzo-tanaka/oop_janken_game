@@ -1,7 +1,13 @@
 class Janken
-  def play(left, right, lang)
+  attr_reader :display
+
+  def initialize(display)
+    @display = display
+  end
+
+  def play(left, right)
     result = judge(left, right)
-    show_result(result, lang)
+    show_result(result)
   end
 
   private
@@ -38,8 +44,7 @@ class Janken
     end
   end
 
-  def show_result(result, lang)
-    display = get_display(lang)
+  def show_result(result)
     display.show(result)
   end
 

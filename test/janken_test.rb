@@ -8,35 +8,41 @@ class JankenTest < Minitest::Test
 
   class JapaneseJanken < self
     def test_win
-      janken = Janken.new
-      assert_equal('勝利', janken.play(0, 1, 'ja'))
+      display = JapaneseDisplay.new
+      janken = Janken.new(display)
+      assert_equal('勝利', janken.play(0, 1))
     end
 
     def test_draw
-      janken = Janken.new
-      assert_equal('引き分け', janken.play(0, 0, 'ja'))
+      display = JapaneseDisplay.new
+      janken = Janken.new(display)
+      assert_equal('引き分け', janken.play(0, 0))
     end
 
     def test_lose
-      janken = Janken.new
-      assert_equal('敗北', janken.play(0, 2, 'ja'))
+      display = JapaneseDisplay.new
+      janken = Janken.new(display)
+      assert_equal('敗北', janken.play(0, 2))
     end
   end
 
   class EnglishJanken < self
     def test_win
-      janken = Janken.new
-      assert_equal('Win', janken.play(0, 1, 'en'))
+      display = EnglishDisplay.new
+      janken = Janken.new(display)
+      assert_equal('Win', janken.play(0, 1))
     end
 
     def test_draw
-      janken = Janken.new
-      assert_equal('Draw', janken.play(1, 1, 'en'))
+      display = EnglishDisplay.new
+      janken = Janken.new(display)
+      assert_equal('Draw', janken.play(1, 1))
     end
 
     def test_lose
-      janken = Janken.new
-      assert_equal('Lose', janken.play(0, 2, 'en'))
+      display = EnglishDisplay.new
+      janken = Janken.new(display)
+      assert_equal('Lose', janken.play(0, 2))
     end
   end
 end
