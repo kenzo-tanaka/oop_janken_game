@@ -41,23 +41,9 @@ class Janken
   def show_result(result, lang)
     case lang
     when 'en'
-      case result
-      when 1
-        'Win'
-      when 0
-        'Draw'
-      else
-        'Lose'
-      end
+      EnglishDisplay.new.show(result)
     when 'ja'
-      case result
-      when 1
-        '勝利'
-      when 0
-        '引き分け'
-      else
-        '敗北'
-      end
+      JapaneseDisplay.new.show(result)
     end
   end
 end

@@ -1,4 +1,6 @@
 require 'minitest/autorun'
+require_relative '../lib/english_display'
+require_relative '../lib/japanese_display'
 require_relative '../lib/janken'
 
 class JankenTest < Minitest::Test
