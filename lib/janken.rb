@@ -39,11 +39,16 @@ class Janken
   end
 
   def show_result(result, lang)
+    display = get_display(lang)
+    display.show(result)
+  end
+
+  def get_display(lang)
     case lang
-    when 'en'
-      EnglishDisplay.new.show(result)
     when 'ja'
-      JapaneseDisplay.new.show(result)
+      JapaneseDisplay.new
+    else
+      EnglishDisplay.new
     end
   end
 end
