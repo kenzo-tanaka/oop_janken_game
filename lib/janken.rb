@@ -32,14 +32,14 @@ class Janken
       else
         1
       end
-    else
+    when 2
       case right
-      when 2
-        0
+      when 0
+        1
       when 1
         -1
       else
-        1
+        0
       end
     end
   end
