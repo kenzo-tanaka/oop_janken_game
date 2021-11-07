@@ -1,5 +1,5 @@
 class Janken
-  def play(left, right)
+  def play(left, right, lang)
     result = judge(left, right)
     show_result(result)
   end
