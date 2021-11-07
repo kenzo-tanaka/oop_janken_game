@@ -1,4 +1,4 @@
-class EnglishDisplay
+class EnglishDisplay < Display
   def show(result)
     case result
     when 1

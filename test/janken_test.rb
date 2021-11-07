@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require_relative '../lib/display'
 require_relative '../lib/english_display'
 require_relative '../lib/japanese_display'
 require_relative '../lib/janken'

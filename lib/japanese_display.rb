@@ -1,4 +1,4 @@
-class JapaneseDisplay
+class JapaneseDisplay < Display
   def show(result)
     case result
     when 1
