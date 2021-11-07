@@ -35,11 +35,11 @@ class Janken
     else
       case right
       when 2
-        1
+        0
       when 1
         -1
       else
-        0
+        1
       end
     end
   end

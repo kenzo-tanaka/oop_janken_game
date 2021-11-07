@@ -23,6 +23,18 @@ class JankenTest < Minitest::Test
     def test_lose
       assert_equal('敗北', @janken.play(0, 2))
     end
+
+    def test_win_2
+      assert_equal('勝利', @janken.play(2, 0))
+    end
+
+    def test_draw_2
+      assert_equal('引き分け', @janken.play(2, 2))
+    end
+
+    def test_lose_2
+      assert_equal('敗北', @janken.play(2, 1))
+    end
   end
 
   class EnglishJanken < self
