@@ -1,7 +1,7 @@
 class Janken
   def play(left, right, lang)
     result = judge(left, right)
-    show_result(result)
+    show_result(result, lang)
   end
 
   private
@@ -38,14 +38,16 @@ class Janken
     end
   end
 
-  def show_result(result)
-    case result
-    when 1
-      '勝利'
-    when 0
-      '引き分け'
-    else
-      '敗北'
+  def show_result(result, lang)
+    if lang == 'ja'
+      case result
+      when 1
+        '勝利'
+      when 0
+        '引き分け'
+      else
+        '敗北'
+      end
     end
   end
 end
