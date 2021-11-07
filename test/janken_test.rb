@@ -12,4 +12,9 @@ class JankenTest < Minitest::Test
     janken = Janken.new
     assert_equal('引き分け', janken.play(0, 0))
   end
+
+  def test_lose
+    janken = Janken.new
+    assert_equal('敗北', janken.play(0, 2))
+  end
 end
